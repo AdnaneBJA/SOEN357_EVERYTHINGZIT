@@ -1,0 +1,93 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.submit {
+  margin-bottom: var(--space-5);
+}
+
+.footer {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.link {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-black);
+}
+
+/* Role selector */
+.roleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.roleLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.roleOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.roleOption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-3) var(--space-3);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast);
+  position: relative;
+}
+
+.roleOption:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface);
+}
+
+.roleSelected {
+  border-color: var(--color-yellow);
+  background: var(--color-yellow-light);
+}
+
+.roleSelected:hover {
+  border-color: var(--color-yellow-dark);
+}
+
+.roleRadio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.roleTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.roleDesc {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+}
