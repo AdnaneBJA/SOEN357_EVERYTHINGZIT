@@ -1,0 +1,612 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Hero ─────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-10) var(--page-padding-x);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: var(--space-12) var(--page-padding-x-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    grid-template-columns: 1fr 420px;
+    align-items: center;
+    gap: var(--space-16);
+    padding: var(--space-16) var(--page-padding-x-lg);
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 6px 12px;
+  background: var(--color-yellow-light);
+  border: 1px solid var(--color-yellow);
+  border-radius: 100px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #7a6000;
+  width: fit-content;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--color-text-primary);
+}
+
+@media (min-width: 768px) {
+  .heroTitle { font-size: 3.25rem; }
+}
+
+@media (min-width: 1024px) {
+  .heroTitle { font-size: 3.75rem; }
+}
+
+.heroAccent {
+  color: #000;
+  background: var(--color-yellow);
+  padding: 0 6px;
+  border-radius: 4px;
+  display: inline;
+}
+
+.heroDesc {
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+}
+
+.heroCtas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 24px;
+  background: var(--color-black);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color var(--transition-fast),
+              box-shadow var(--transition-fast),
+              transform var(--transition-fast);
+}
+
+.ctaPrimary:hover {
+  background: #222;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 24px;
+  background: transparent;
+  color: var(--color-text-primary);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid var(--color-border-strong);
+  text-decoration: none;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.ctaSecondary:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface);
+}
+
+/* Mock card visual */
+.heroVisual {
+  position: relative;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .heroVisual {
+    display: block;
+    height: 360px;
+  }
+}
+
+.mockCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.mockPhoto {
+  height: 160px;
+  background: var(--color-yellow-light);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockPhotoInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--color-yellow);
+  border-radius: 12px;
+}
+
+.mockIcon {
+  color: var(--color-black);
+}
+
+.mockBadge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--color-black);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.mockBody {
+  padding: var(--space-4);
+}
+
+.mockCategory {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-1);
+}
+
+.mockTitle {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.mockFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.mockBidLabel {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.mockBidAmount {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.mockCharity {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* Second mock card */
+.mockCard2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+}
+
+.mockPhoto2 {
+  width: 44px;
+  height: 44px;
+  background: var(--color-surface);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mock2Body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ─── Stats ─────────────────────────────────────────────── */
+.stats {
+  background: var(--color-black);
+  padding: var(--space-8) var(--page-padding-x);
+}
+
+@media (min-width: 768px) {
+  .stats { padding: var(--space-10) var(--page-padding-x-md); }
+}
+
+@media (min-width: 1024px) {
+  .stats { padding: var(--space-10) var(--page-padding-x-lg); }
+}
+
+.statsInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6) var(--space-8);
+}
+
+@media (min-width: 640px) {
+  .statsInner { grid-template-columns: repeat(4, 1fr); }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-yellow);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .statValue { font-size: 2.5rem; }
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  font-weight: 500;
+}
+
+/* ─── Shared section styles ─────────────────────────────── */
+.sectionInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: var(--space-10);
+}
+
+.sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-2);
+}
+
+@media (min-width: 768px) {
+  .sectionTitle { font-size: 2.25rem; }
+}
+
+.sectionDesc {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+/* ─── How it works ──────────────────────────────────────── */
+.howSection {
+  padding: var(--space-12) var(--page-padding-x);
+  background: var(--color-surface);
+}
+
+@media (min-width: 768px) {
+  .howSection { padding: var(--space-16) var(--page-padding-x-md); }
+}
+
+@media (min-width: 1024px) {
+  .howSection { padding: var(--space-16) var(--page-padding-x-lg); }
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .steps { grid-template-columns: repeat(3, 1fr); }
+}
+
+.step {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--space-6);
+  box-shadow: var(--shadow-card);
+  position: relative;
+}
+
+.stepNumber {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--color-text-disabled);
+  margin-bottom: var(--space-4);
+}
+
+.stepIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-yellow-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  color: #7a6000;
+}
+
+.stepTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.stepDesc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* ─── Charity spotlight ─────────────────────────────────── */
+.charitySection {
+  padding: var(--space-12) var(--page-padding-x);
+}
+
+@media (min-width: 768px) {
+  .charitySection { padding: var(--space-16) var(--page-padding-x-md); }
+}
+
+@media (min-width: 1024px) {
+  .charitySection { padding: var(--space-16) var(--page-padding-x-lg); }
+}
+
+.charityGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .charityGrid { grid-template-columns: 1fr 1fr; }
+}
+
+.charityCard {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow var(--transition-base),
+              border-color var(--transition-base);
+}
+
+.charityCard:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-border-strong);
+}
+
+.charityLogo {
+  width: 44px;
+  height: 44px;
+  background: var(--color-yellow);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--color-black);
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+.charityInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.charityName {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.charityDesc {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.charityMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.charityMetaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* ─── CTA strip ─────────────────────────────────────────── */
+.ctaStrip {
+  background: var(--color-yellow);
+  padding: var(--space-12) var(--page-padding-x);
+}
+
+@media (min-width: 768px) {
+  .ctaStrip { padding: var(--space-16) var(--page-padding-x-md); }
+}
+
+@media (min-width: 1024px) {
+  .ctaStrip { padding: var(--space-16) var(--page-padding-x-lg); }
+}
+
+.ctaStripInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .ctaStripInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-8);
+  }
+}
+
+.ctaStripTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-black);
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) {
+  .ctaStripTitle { font-size: 2rem; }
+}
+
+.ctaStripDesc {
+  font-size: 1rem;
+  color: rgba(0,0,0,0.6);
+  max-width: 480px;
+}
+
+.ctaStripActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.ctaStripPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 24px;
+  background: var(--color-black);
+  color: #fff;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+}
+
+.ctaStripPrimary:hover {
+  background: #222;
+  box-shadow: var(--shadow-md);
+}
+
+.ctaStripGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 20px;
+  background: transparent;
+  color: var(--color-black);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 2px solid rgba(0,0,0,0.25);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.ctaStripGhost:hover {
+  border-color: var(--color-black);
+  background: rgba(0,0,0,0.06);
+}
