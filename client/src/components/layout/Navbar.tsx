@@ -2,6 +2,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { LogIn, LayoutDashboard, User } from 'lucide-react'
 import { useAuth } from '../../contexts/AuthContext'
 import { useToast } from '../../contexts/ToastContext'
+import NotificationBell from './NotificationBell'
 import styles from './Navbar.module.css'
 
 export default function Navbar() {
@@ -63,6 +64,7 @@ export default function Navbar() {
         <div className={styles.actions}>
           {user ? (
             <>
+              <NotificationBell />
               <NavLink
                 to="/profile"
                 className={({ isActive }) => `${styles.avatarBtn} ${isActive ? styles.avatarBtnActive : ''}`}
