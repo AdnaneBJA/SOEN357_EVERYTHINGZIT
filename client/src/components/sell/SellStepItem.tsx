@@ -9,13 +9,14 @@ interface SellStepItemProps {
   form: SellFormState
   errors: StepErrors
   onChange: (patch: Partial<SellFormState>) => void
+  hidePrice?: boolean
 }
 
 const CONDITIONS = Object.entries(CONDITION_LABELS).map(([value, label]) => ({
   value: value as ItemCondition, label,
 }))
 
-export default function SellStepItem({ form, errors, onChange }: SellStepItemProps) {
+export default function SellStepItem({ form, errors, onChange, hidePrice = false }: SellStepItemProps) {
   return (
     <div className={styles.fields}>
       {/* Photos */}
@@ -116,23 +117,25 @@ export default function SellStepItem({ form, errors, onChange }: SellStepItemPro
       </div>
 
       {/* Starting price */}
-      <div className={styles.field}>
-        <label htmlFor="startingPrice" className={styles.label}>
-          Starting price <span className={styles.optional}>(CA$, 0 = any bid wins)</span>
-        </label>
-        <div className={styles.priceWrap}>
-          <span className={styles.currency}>CA$</span>
-          <input
-            id="startingPrice"
-            type="number"
-            min="0"
-            step="1"
-            className={styles.priceInput}
-            value={form.startingPrice}
-            onChange={e => onChange({ startingPrice: e.target.value })}
-          />
+      {!hidePrice && (
+        <div className={styles.field}>
+          <label htmlFor="startingPrice" className={styles.label}>
+            Starting price <span className={styles.optional}>(CA$, 0 = any bid wins)</span>
+          </label>
+          <div className={styles.priceWrap}>
+            <span className={styles.currency}>CA$</span>
+            <input
+              id="startingPrice"
+              type="number"
+              min="0"
+              step="1"
+              className={styles.priceInput}
+              value={form.startingPrice}
+              onChange={e => onChange({ startingPrice: e.target.value })}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
