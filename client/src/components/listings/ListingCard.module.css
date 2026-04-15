@@ -77,6 +77,11 @@
   backdrop-filter: blur(4px);
 }
 
+.timerBadgeEnded {
+  background: rgba(0,0,0,0.45);
+  color: rgba(255,255,255,0.7);
+}
+
 .bidsBadge {
   position: absolute;
   top: var(--space-2);

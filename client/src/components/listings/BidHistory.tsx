@@ -15,6 +15,7 @@ export default function BidHistory({ bids }: BidHistoryProps) {
   const sorted = [...bids].sort((a, b) =>
     new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
   )
+  const maxAmount = Math.max(...bids.map(b => b.amount))
 
   if (sorted.length === 0) {
     return (
@@ -27,9 +28,9 @@ export default function BidHistory({ bids }: BidHistoryProps) {
 
   return (
     <div className={styles.list}>
-      {sorted.map((bid, i) => {
+      {sorted.map((bid) => {
         const name = bid.bidder?.display_name ?? 'Anonymous'
-        const isWinning = i === 0
+        const isWinning = bid.amount === maxAmount
         return (
           <div key={bid.id} className={`${styles.row} ${isWinning ? styles.rowWinning : ''}`}>
             <div className={styles.avatar} aria-hidden="true">

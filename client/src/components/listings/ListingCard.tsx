@@ -13,6 +13,7 @@ interface ListingCardProps {
 export default function ListingCard({ listing }: ListingCardProps) {
   const price = listing.current_highest_bid ?? listing.starting_price
   const hasPhoto = listing.photo_urls.length > 0
+  const isEnded = new Date(listing.bid_ends_at).getTime() <= Date.now()
 
   return (
     <Link to={`/listings/${listing.id}`} className={styles.card}>
@@ -33,8 +34,8 @@ export default function ListingCard({ listing }: ListingCardProps) {
           </div>
         )}
 
-        <div className={styles.timerBadge}>
-          <Clock size={11} aria-hidden="true" />
+        <div className={`${styles.timerBadge} ${isEnded ? styles.timerBadgeEnded : ''}`}>
+          {!isEnded && <Clock size={11} aria-hidden="true" />}
           <CountdownTimer endsAt={listing.bid_ends_at} />
         </div>
 

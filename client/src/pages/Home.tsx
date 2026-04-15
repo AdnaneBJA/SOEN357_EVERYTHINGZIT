@@ -75,9 +75,7 @@ export default function Home() {
         <div className={styles.heroVisual} aria-hidden="true">
           <div className={styles.mockCard}>
             <div className={styles.mockPhoto}>
-              <div className={styles.mockPhotoInner}>
-                <Tag size={28} className={styles.mockIcon} />
-              </div>
+              <img src="/overcoat.jpg" alt="" className={styles.mockPhotoImg} />
               <div className={styles.mockBadge}>
                 <Clock size={11} />
                 1h 42m left

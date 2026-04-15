@@ -7,24 +7,21 @@ interface CountdownTimerProps {
 }
 
 function getInterval(diffMs: number): number {
-  if (diffMs < 5 * 60 * 1000)       return 1_000   // < 5 min  → every second
-  if (diffMs < 60 * 60 * 1000)      return 10_000  // < 1 hour → every 10s
-  if (diffMs < 24 * 60 * 60 * 1000) return 60_000  // < 1 day  → every minute
-  return 60 * 60 * 1000                             // else     → every hour
+  if (diffMs < 5 * 60 * 1000)  return 1_000   // < 5 min  -> every second
+  if (diffMs < 60 * 60 * 1000) return 10_000  // < 1 hour -> every 10s
+  return 60_000                                // else     -> every minute
 }
 
 function format(diffMs: number): string {
   if (diffMs <= 0) return 'Ended'
-  const totalSec = Math.floor(diffMs / 1000)
-  const days  = Math.floor(totalSec / 86400)
-  const hours = Math.floor((totalSec % 86400) / 3600)
+  const subDay   = diffMs % (1000 * 60 * 60 * 24)
+  const totalSec = Math.floor(subDay / 1000)
+  const hours = Math.floor(totalSec / 3600)
   const mins  = Math.floor((totalSec % 3600) / 60)
   const secs  = totalSec % 60
 
-  if (days >= 2)  return `${days}d ${hours}h`
-  if (days === 1) return hours > 0 ? `1d ${hours}h` : '1d'
-  if (hours > 0)  return `${hours}h ${mins}m`
-  if (mins > 0)   return `${mins}m ${secs}s`
+  if (hours > 0) return `${hours}h ${mins}m`
+  if (mins > 0)  return `${mins}m ${secs}s`
   return `${secs}s`
 }
 

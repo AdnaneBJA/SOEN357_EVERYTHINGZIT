@@ -159,9 +159,14 @@
   height: 160px;
   background: var(--color-yellow-light);
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+
+.mockPhotoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .mockPhotoInner {
