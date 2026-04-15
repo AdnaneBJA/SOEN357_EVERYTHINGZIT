@@ -2,14 +2,20 @@
 .profileCard {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-5) var(--space-6);
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: 14px;
   box-shadow: var(--shadow-card);
-  margin-bottom: var(--space-8);
-  flex-wrap: wrap;
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .profileCard {
+    gap: var(--space-4);
+    padding: var(--space-5) var(--space-6);
+  }
 }
 
 .avatar {

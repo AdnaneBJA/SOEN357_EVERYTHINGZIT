@@ -39,6 +39,19 @@
 
 .tabActive {
   color: var(--color-black);
+  position: relative;
+}
+
+.tabActive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--color-yellow);
+  border-radius: 0 0 2px 2px;
 }
 
 .icon {

@@ -567,6 +567,11 @@
   gap: var(--space-3);
   flex-shrink: 0;
   flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .ctaStripActions { width: auto; }
 }
 
 .ctaStripPrimary {

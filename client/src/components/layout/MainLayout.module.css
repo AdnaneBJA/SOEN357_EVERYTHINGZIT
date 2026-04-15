@@ -4,6 +4,49 @@
   min-height: 100svh;
 }
 
+/* Mobile top bar — brand visibility when Navbar is hidden */
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 var(--page-padding-x);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .mobileHeader { display: none; }
+}
+
+.mobileBrand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+}
+
+.mobileBrandMark {
+  width: 28px;
+  height: 28px;
+  background: var(--color-yellow);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--color-black);
+  letter-spacing: -0.5px;
+}
+
+.mobileBrandName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  letter-spacing: -0.2px;
+}
+
 .main {
   flex: 1;
   /* Reserve bottom space for mobile tab bar */

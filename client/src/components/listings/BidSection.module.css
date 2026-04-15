@@ -148,6 +148,12 @@
   -webkit-appearance: none;
 }
 
+@media (max-width: 480px) {
+  .bidInput {
+    font-size: 1rem; /* prevent iOS zoom on focus */
+  }
+}
+
 .bidInput:hover {
   border-color: var(--color-text-muted);
 }

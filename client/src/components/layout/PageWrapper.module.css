@@ -2,7 +2,7 @@
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-6) var(--page-padding-x);
+  padding: var(--space-5) var(--page-padding-x);
 }
 
 @media (min-width: 768px) {

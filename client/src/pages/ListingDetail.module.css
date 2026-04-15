@@ -50,7 +50,7 @@
 @media (min-width: 900px) {
   .rightCol {
     position: sticky;
-    top: calc(var(--navbar-height) + var(--space-6));
+    top: calc(var(--navbar-height) + var(--space-4));
   }
 }
 

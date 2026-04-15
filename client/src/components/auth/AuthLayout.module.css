@@ -1,10 +1,14 @@
 .page {
   min-height: 100svh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: var(--space-4);
+  padding: var(--space-8) var(--space-4) var(--space-4);
   background: var(--color-surface);
+}
+
+@media (min-height: 600px) {
+  .page { align-items: center; }
 }
 
 .card {
