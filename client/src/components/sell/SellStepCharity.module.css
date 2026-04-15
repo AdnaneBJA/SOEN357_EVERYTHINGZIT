@@ -1,0 +1,232 @@
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.labelError { color: var(--color-error); }
+
+.required { color: var(--color-error); }
+
+.optional {
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+}
+
+.hiddenRadio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Charity grid */
+.charityGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+@media (min-width: 480px) {
+  .charityGrid { grid-template-columns: 1fr 1fr; }
+}
+
+.charityCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.charityCard:hover {
+  border-color: var(--color-text-muted);
+  background: var(--color-surface);
+}
+
+.charitySelected {
+  border-color: var(--color-yellow);
+  background: var(--color-yellow-light);
+}
+
+.charityLogo {
+  width: 36px;
+  height: 36px;
+  background: var(--color-yellow);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 800;
+  color: var(--color-black);
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+.charitySelected .charityLogo {
+  background: var(--color-yellow-dark);
+}
+
+.charityInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.charityName {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.charityCity {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Pickup section */
+.pickupSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+}
+
+.pickupHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+/* Drop-off card */
+.dropOffCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--color-bg);
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast);
+}
+
+.dropOffCard:hover {
+  border-color: var(--color-text-muted);
+}
+
+.dropOffSelected {
+  border-color: var(--color-yellow);
+  background: var(--color-yellow-light);
+}
+
+.dropOffText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dropOffTitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.dropOffDesc {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* Schedule fields */
+.scheduleFields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pickupNote {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  padding: var(--space-3);
+  background: var(--color-bg);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+/* Day / time grids */
+.dayGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.timeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.dayOption {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast),
+              background-color var(--transition-fast),
+              color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.dayOption:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text-primary);
+}
+
+.daySelected {
+  border-color: var(--color-yellow);
+  background: var(--color-yellow-light);
+  color: #7a6000;
+}
+
+.error {
+  font-size: 0.8125rem;
+  color: var(--color-error);
+  font-weight: 500;
+}

@@ -1,0 +1,22 @@
+.wrapper {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--page-padding-x);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: var(--space-8) var(--page-padding-x-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    padding: var(--space-10) var(--page-padding-x-lg);
+  }
+}
+
+.narrow {
+  max-width: 680px;
+}

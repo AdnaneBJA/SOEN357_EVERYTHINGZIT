@@ -1,0 +1,207 @@
+.section {
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 14px;
+  padding: var(--space-5);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  box-shadow: var(--shadow-md);
+}
+
+/* Top row */
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.status {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.statusActive {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.statusSold {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+.statusDonated {
+  background: var(--color-yellow-light);
+  color: #7a6000;
+  border: 1px solid var(--color-yellow);
+}
+
+.timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.timer svg {
+  color: var(--color-text-muted);
+}
+
+/* Price */
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.priceLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.bidCount {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Auth prompt */
+.authPrompt {
+  text-align: center;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+.authLink {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Bid form */
+.bidForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.bidInputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currencySymbol {
+  position: absolute;
+  left: 14px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  pointer-events: none;
+  user-select: none;
+}
+
+.bidInput {
+  width: 100%;
+  padding: 12px 14px 12px 52px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 8px;
+  transition: border-color var(--transition-fast),
+              box-shadow var(--transition-fast);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.bidInput::-webkit-outer-spin-button,
+.bidInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+@media (max-width: 480px) {
+  .bidInput {
+    font-size: 1rem; /* prevent iOS zoom on focus */
+  }
+}
+
+.bidInput:hover {
+  border-color: var(--color-text-muted);
+}
+
+.bidInput:focus {
+  outline: none;
+  border-color: var(--color-yellow);
+  box-shadow: 0 0 0 3px var(--color-yellow-light);
+}
+
+.minBidHint {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Seller actions */
+.sellerActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sellerNote {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border-radius: 8px;
+}
+
+.repNote {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+/* Closed */
+.closedNote {
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.closedText {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
