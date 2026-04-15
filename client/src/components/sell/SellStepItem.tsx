@@ -47,7 +47,7 @@ export default function SellStepItem({ form, errors, onChange, hidePrice = false
         rows={3}
         value={form.description}
         onChange={e => onChange({ description: e.target.value })}
-        placeholder="Describe the item — brand, fit, any flaws..."
+        placeholder="Describe the item: brand, fit, any flaws..."
         hint="Optional but helps buyers."
       />
 

@@ -4,7 +4,7 @@
   min-height: 100svh;
 }
 
-/* Mobile top bar — brand visibility when Navbar is hidden */
+/* Mobile top bar - brand visibility when Navbar is hidden */
 .mobileHeader {
   display: flex;
   align-items: center;

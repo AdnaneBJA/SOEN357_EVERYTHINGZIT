@@ -47,7 +47,7 @@ export default function NotificationBell() {
       .order('created_at', { ascending: false })
 
     if (myBids) {
-      // Group by listing — find my highest bid per listing
+      // Group by listing - find my highest bid per listing
       const byListing = new Map<string, typeof myBids[number]>()
       for (const bid of myBids) {
         const lid = bid.listing_id

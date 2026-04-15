@@ -149,7 +149,7 @@ export default function Sell() {
           </Button>
         ) : (
           <Button onClick={handleSubmit} loading={submitting} variant="primary" size="lg">
-            List item — start auction
+            List item and start auction
           </Button>
         )}
       </div>

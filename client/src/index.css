@@ -1,4 +1,4 @@
-/* FullCircle — Global Design Tokens & Reset */
+/* FullCircle - Global Design Tokens & Reset */
 
 :root {
   /* Colors */
@@ -21,7 +21,7 @@
   --color-info:          #2563EB;
 
   /* Typography */
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
   /* Shadows */
   --shadow-xs:         0 1px 2px rgba(0,0,0,0.05);

@@ -74,7 +74,7 @@ export default function Browse() {
           (b.current_highest_bid ?? b.starting_price) - (a.current_highest_bid ?? a.starting_price)
         )
         break
-      default: // newest — already sorted by created_at desc from DB
+      default: // newest - already sorted by created_at desc from DB
         break
     }
 

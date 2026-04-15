@@ -8,7 +8,7 @@ export default function MainLayout() {
     <div className={styles.layout}>
       <Navbar />
 
-      {/* Mobile-only top bar — shows brand since Navbar is hidden on mobile */}
+      {/* Mobile-only top bar - shows brand since Navbar is hidden on mobile */}
       <div className={styles.mobileHeader} aria-hidden="true">
         <Link to="/" className={styles.mobileBrand} tabIndex={-1}>
           <span className={styles.mobileBrandMark}>FC</span>

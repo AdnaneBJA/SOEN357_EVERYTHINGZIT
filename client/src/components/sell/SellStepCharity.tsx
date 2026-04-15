@@ -50,7 +50,7 @@ export default function SellStepCharity({ form, errors, onChange }: SellStepChar
         {errors.charityId && <span className={styles.error}>{errors.charityId}</span>}
       </div>
 
-      {/* Pickup scheduling — only shown after charity selected */}
+      {/* Pickup scheduling - only shown after charity selected */}
       {selectedCharity && (
         <div className={styles.pickupSection}>
           <div className={styles.pickupHeader}>
@@ -68,7 +68,7 @@ export default function SellStepCharity({ form, errors, onChange }: SellStepChar
             />
             <div className={styles.dropOffText}>
               <span className={styles.dropOffTitle}>I will drop it off</span>
-              <span className={styles.dropOffDesc}>Skip scheduling — bring the item to the charity yourself.</span>
+              <span className={styles.dropOffDesc}>Skip scheduling. Bring the item to the charity yourself.</span>
             </div>
           </label>
 

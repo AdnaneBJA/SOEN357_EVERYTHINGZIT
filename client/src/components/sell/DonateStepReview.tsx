@@ -35,7 +35,7 @@ export default function DonateStepReview({ form }: DonateStepReviewProps) {
         </div>
         <div className={styles.sectionContent}>
           <p className={styles.sectionLabel}>Item</p>
-          <h3 className={styles.itemTitle}>{form.title || '—'}</h3>
+          <h3 className={styles.itemTitle}>{form.title || '-'}</h3>
           {form.description && (
             <p className={styles.itemDesc}>{form.description}</p>
           )}
@@ -64,7 +64,7 @@ export default function DonateStepReview({ form }: DonateStepReviewProps) {
               <p className={styles.detail}>{charity.city}</p>
             </>
           ) : (
-            <p className={styles.detail}>—</p>
+            <p className={styles.detail}>-</p>
           )}
         </div>
       </div>
@@ -88,7 +88,7 @@ export default function DonateStepReview({ form }: DonateStepReviewProps) {
               )}
             </>
           ) : (
-            <p className={styles.detail}>—</p>
+            <p className={styles.detail}>-</p>
           )}
         </div>
       </div>

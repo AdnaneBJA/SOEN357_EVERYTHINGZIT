@@ -79,7 +79,7 @@ export default function Profile() {
         `)
         .eq('bidder_id', profile.id)
         .order('created_at', { ascending: false })
-      // Deduplicate — keep only the highest bid per listing
+      // Deduplicate - keep only the highest bid per listing
       const seen = new Set<string>()
       const deduped: BidRow[] = []
       for (const row of (data ?? []) as unknown as BidRow[]) {

@@ -55,7 +55,7 @@ export default function Home() {
           </h1>
           <p className={styles.heroDesc}>
             FullCircle connects sellers with local charities through live 2-hour auctions.
-            List an item, pick a cause — if it sells, the proceeds go to charity.
+            List an item, pick a cause. If it sells, the proceeds go to charity.
             If it doesn't, we donate it anyway.
           </p>
           <div className={styles.heroCtas}>
@@ -185,7 +185,7 @@ export default function Home() {
         <div className={styles.ctaStripInner}>
           <h2 className={styles.ctaStripTitle}>Ready to make a difference?</h2>
           <p className={styles.ctaStripDesc}>
-            List your first item today — it takes 2 minutes and always benefits a local charity.
+            List your first item today. It takes 2 minutes and always benefits a local charity.
           </p>
           <div className={styles.ctaStripActions}>
             {user ? (

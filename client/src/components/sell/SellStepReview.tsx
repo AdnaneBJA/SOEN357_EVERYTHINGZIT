@@ -37,7 +37,7 @@ export default function SellStepReview({ form, mode = 'sell' }: SellStepReviewPr
         </div>
         <div className={styles.sectionContent}>
           <p className={styles.sectionLabel}>Item</p>
-          <h3 className={styles.itemTitle}>{form.title || '—'}</h3>
+          <h3 className={styles.itemTitle}>{form.title || '-'}</h3>
           {form.description && (
             <p className={styles.itemDesc}>{form.description}</p>
           )}
@@ -53,7 +53,7 @@ export default function SellStepReview({ form, mode = 'sell' }: SellStepReviewPr
         </div>
       </div>
 
-      {/* Auction / price — sell mode only */}
+      {/* Auction / price - sell mode only */}
       {mode === 'sell' && (
         <div className={styles.section}>
           <div className={styles.sectionIcon}>
@@ -82,7 +82,7 @@ export default function SellStepReview({ form, mode = 'sell' }: SellStepReviewPr
               <p className={styles.detail}>{charity.city}</p>
             </>
           ) : (
-            <p className={styles.detail}>—</p>
+            <p className={styles.detail}>-</p>
           )}
         </div>
       </div>
@@ -106,7 +106,7 @@ export default function SellStepReview({ form, mode = 'sell' }: SellStepReviewPr
               )}
             </>
           ) : (
-            <p className={styles.detail}>—</p>
+            <p className={styles.detail}>-</p>
           )}
         </div>
       </div>
